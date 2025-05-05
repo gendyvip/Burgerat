@@ -13,8 +13,8 @@ export default function Providers(props) {
 
 
   useEffect(() => {
-    axios.get("http://localhost:3005/data").then((response) => {
-      setItems(response.data.menu_items)
+    axios.get("https://gendyvip.github.io/Burgerat/db.json").then((response) => {
+      setItems(response.data.data.menu_items)
     }).catch((error) => {
       console.log("Errors are ", error)
     })
